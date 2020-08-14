@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Model.Job>
+
+
+@if (Model.Count() > 0)
+{
+    <ul>
+        @foreach(var job in Model.ToList())
+        {
+        <li>@Html.DisplayFor(m => job.Description)</li>
+        }
+    </ul>
+    <p>Jobs out there</p>
+}
+else
+{
+    <p>No jobs</p>
+}
+
